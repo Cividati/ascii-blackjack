@@ -131,8 +131,9 @@ pre{white-space:pre;font-size:16px;line-height:1.2;overflow-x:auto;margin:2px 0;
     </div>
 
     <div id="phase-betting" style="margin-top:4px">
-      <div class="status-line">✦ PLACE YOUR BET ✦</div>
+      <div class="status-line" id="bet-display">✦ PLACE YOUR BET ✦</div>
       <div class="chips" id="chips-container"></div>
+      <div style="text-align:center;margin:6px 0"><span style="color:#555;font-size:13px">Bet: </span><span id="bet-amount" style="color:#ffd700;font-size:18px;font-weight:700">$0</span></div>
       <div class="controls">
         <button class="btn btn-primary" id="btn-deal" onclick="deal()">Deal</button>
       </div>
@@ -184,7 +185,7 @@ let state={deck:[],playerHand:[],dealerHand:[],splitHand:null,currentHand:'playe
 const CHIPS=[1,5,25,50,100,500,1000,5000];
 function chipArt(val){let label=val===5000?'ALL-IN':'$'+val;let l=label.padEnd(6);if(val===5000)l='ALL-IN';return{lines:['┌───────┐',`│ ${l} │`,'│   ●   │','└───────┘'],width:9}}
 function initChips(){let el=document.getElementById('chips-container');el.innerHTML='';CHIPS.forEach(val=>{let ca=chipArt(val);let d=document.createElement('div');d.className='chip';d.dataset.val=val;d.innerHTML='<pre>'+ca.lines.join('\n')+'</pre>';d.onclick=()=>selectChip(val);el.appendChild(d)})}
-function selectChip(val){if(state.phase!=='betting')return;state.bet=val;state.allInMode=(val===5000);document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('selected',parseInt(c.dataset.val)===val))}
+function selectChip(val){if(state.phase!=='betting')return;state.bet=val;state.allInMode=(val===5000);document.querySelectorAll('.chip').forEach(c=>c.classList.toggle('selected',parseInt(c.dataset.val)===val));document.getElementById('bet-amount').textContent=val===5000?'ALL-IN':'$'+val;document.getElementById('bet-display').textContent=val===5000?'✦ ALL IN! ✦':'✦ Bet: $'+val+' ✦'}
 
 function updateHeader(){
   document.getElementById('hdr-balance').textContent='$'+state.balance;
