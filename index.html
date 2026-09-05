@@ -9,7 +9,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:#0a0a0a;color:#00ff41;font-family:'Fira Code',monospace;min-height:100vh;display:flex;justify-content:center;padding:20px}
 #game{max-width:900px;width:100%}
-pre{white-space:pre;font-size:12px;line-height:1.15;overflow-x:auto;margin:3px 0;font-family:'Fira Code',monospace}
+pre{white-space:pre;font-size:14px;line-height:1.15;overflow-x:auto;margin:3px 0;font-family:'Fira Code',monospace}
 
 /* Banner */
 .banner{color:#ffd700;text-align:center;margin-bottom:10px;text-shadow:0 0 10px rgba(255,215,0,0.4);animation:glowPulse 3s ease-in-out infinite}
@@ -21,49 +21,49 @@ pre{white-space:pre;font-size:12px;line-height:1.15;overflow-x:auto;margin:3px 0
 .sidebar{flex:1;min-width:220px;display:flex;flex-direction:column;gap:10px}
 
 /* Header banner */
-.info-header{display:flex;justify-content:space-between;align-items:center;background:#111;border:1px solid #333;border-radius:6px;padding:8px 14px;margin-bottom:10px;font-size:12px;flex-wrap:wrap;gap:4px}
+.info-header{display:flex;justify-content:space-between;align-items:center;background:#111;border:1px solid #333;border-radius:6px;padding:8px 14px;margin-bottom:10px;font-size:13px;flex-wrap:wrap;gap:4px}
 .info-header .label{color:#666}
 .info-header .val{color:#ffd700;font-weight:700}
 .info-header .val.loss{color:#ff6b6b}
 .info-header .val.win{color:#00ff41}
-.round-counter{color:#555;font-size:11px}
+.round-counter{color:#555;font-size:13px}
 
 /* Table cells */
 .table{background:linear-gradient(135deg,#0f2a1a,#1a3a2a);border:2px solid #2a5a3a;border-radius:8px;padding:14px;margin-bottom:10px;box-shadow:inset 0 0 30px rgba(0,50,0,0.3),0 4px 12px rgba(0,0,0,0.5);position:relative;overflow:hidden;transition:all 0.3s}
 .table::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(0,255,65,0.03) 0%,transparent 60%);pointer-events:none}
-.hand-label{color:#ffd700;font-size:11px;margin-bottom:4px;display:flex;justify-content:space-between}
+.hand-label{color:#ffd700;font-size:13px;margin-bottom:4px;display:flex;justify-content:space-between}
 .cards{min-height:70px;margin-bottom:2px}
-.total{color:#999;font-size:10px;margin-bottom:2px;transition:all 0.3s}
+.total{color:#ffd700;font-size:15px;font-weight:700;margin-bottom:4px;transition:all 0.3s}
 .total.highlight{color:#ffd700;font-weight:700}
 
 /* Controls */
 .controls{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin:8px 0}
-.btn{background:linear-gradient(135deg,#1a3a2a,#0f2a1a);color:#00ff41;border:1px solid #2a5a3a;padding:7px 16px;font-family:'Fira Code',monospace;font-size:12px;cursor:pointer;border-radius:4px;transition:all .15s;position:relative}
+.btn{background:linear-gradient(135deg,#1a3a2a,#0f2a1a);color:#00ff41;border:1px solid #2a5a3a;padding:8px 18px;font-family:'Fira Code',monospace;font-size:13px;cursor:pointer;border-radius:4px;transition:all .15s;position:relative}
 .btn:hover{background:#00ff41;color:#0a0a0a;box-shadow:0 0 10px rgba(0,255,65,0.3);transform:translateY(-1px)}
 .btn:active{transform:translateY(0)}
 .btn:disabled{opacity:.25;cursor:not-allowed;background:#1a3a2a;color:#00ff41;box-shadow:none;transform:none}
 .btn-primary{background:linear-gradient(135deg,#ffd700,#cc8800);color:#0a0a0a;border-color:#ffd700;font-weight:700;box-shadow:0 0 6px rgba(255,215,0,0.3)}
 .btn-primary:hover{background:linear-gradient(135deg,#ffe44d,#ffd700);box-shadow:0 0 14px rgba(255,215,0,0.5)}
-.btn-sm{padding:4px 10px;font-size:10px}
+.btn-sm{padding:5px 12px;font-size:11px}
 
 /* Chips */
 .chips{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;margin:10px 0}
 .chip{cursor:pointer;transition:all .2s;opacity:.65;filter:drop-shadow(0 2px 3px rgba(0,0,0,0.5))}
 .chip:hover{transform:scale(1.1) translateY(-2px);opacity:1;filter:drop-shadow(0 4px 8px rgba(255,215,0,0.3))}
 .chip.selected{opacity:1;filter:drop-shadow(0 0 8px #ffd700) drop-shadow(0 0 16px rgba(255,215,0,0.2));transform:scale(1.06) translateY(-3px)}
-.chip pre{font-size:10px}
+.chip pre{font-size:11px}
 
 /* Sidebar panels */
 .panel{background:#0f0f0f;border:1px solid #222;border-radius:6px;padding:10px}
-.panel-title{color:#555;font-size:9px;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px;border-bottom:1px solid #1a1a1a;padding-bottom:4px}
-.panel pre{font-size:10px;line-height:1.3}
-.history-row{display:flex;justify-content:space-between;font-size:10px;padding:3px 0;border-bottom:1px solid #141414}
+.panel-title{color:#555;font-size:10px;text-transform:uppercase;letter-spacing:2px;margin-bottom:6px;border-bottom:1px solid #1a1a1a;padding-bottom:4px}
+.panel pre{font-size:11px;line-height:1.3}
+.history-row{display:flex;justify-content:space-between;font-size:11px;padding:3px 0;border-bottom:1px solid #141414}
 .history-row .r{color:#666}
 .history-row .r-win{color:#00ff41}
 .history-row .r-loss{color:#ff6b6b}
 .history-row .r-push{color:#aaa}
 .history-row .r-bj{color:#ffd700;font-weight:700}
-.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:10px}
+.stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:11px}
 .stats-grid div{padding:3px 6px;background:#0a0a0a;border-radius:3px}
 .stats-grid .s-label{color:#555}
 .stats-grid .s-val{color:#ddd;float:right}
@@ -78,14 +78,14 @@ pre{white-space:pre;font-size:12px;line-height:1.15;overflow-x:auto;margin:3px 0
 .win-effect{animation:winFlash 0.5s ease-in-out 3}
 .loss-effect{animation:lossFlash 0.5s ease-in-out 3}
 .bj-effect{animation:bjFlash 0.7s ease-in-out 4}
-.msg{text-align:center;font-size:13px;margin:4px 0;color:#ffd700;font-weight:700;animation:slideIn 0.3s ease-out}
+.msg{text-align:center;font-size:14px;margin:4px 0;color:#ffd700;font-weight:700;animation:slideIn 0.3s ease-out}
 .split-hand{border-top:1px dashed #2a5a3a;padding-top:10px;margin-top:10px}
 .small-loan{color:#ff6b6b;cursor:pointer;font-size:11px;text-align:center;display:block;margin-top:4px}
 .small-loan:hover{color:#ff4444;text-shadow:0 0 8px rgba(255,50,50,0.3)}
 .zero-bal{color:#ff6b6b}
-.footer{text-align:center;color:#333;font-size:9px;margin-top:14px;letter-spacing:3px}
-.status-line{color:#777;text-align:center;font-size:11px;margin:4px 0}
-@media(max-width:700px){.game-area{flex-direction:column}.main-table,.sidebar{min-width:unset}pre{font-size:10px}.chip pre{font-size:8px}body{padding:10px}}
+.footer{text-align:center;color:#333;font-size:10px;margin-top:14px;letter-spacing:3px}
+.status-line{color:#777;text-align:center;font-size:12px;margin:4px 0}
+@media(max-width:700px){.game-area{flex-direction:column}.main-table,.sidebar{min-width:unset}pre{font-size:11px}.chip pre{font-size:9px}body{padding:10px}}
 </style>
 </head>
 <body>
